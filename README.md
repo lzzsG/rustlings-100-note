@@ -1,4 +1,7 @@
-### rustlings
+forked from [LearningOS/rustlings-100exercises-template](https://github.com/LearningOS/rustlings-100exercises-template)
+
+
+## rustlings
 
 - 使用vscode等编辑器打开项目
 - 执行`rustlings watch`依次查看完成情况，完成对应的练习
