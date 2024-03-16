@@ -1,4 +1,5 @@
 forked from [LearningOS/rustlings-100exercises-template](https://github.com/LearningOS/rustlings-100exercises-template)
+增加note命令查看对应rustlings-notebook
 
 
 ## rustlings
