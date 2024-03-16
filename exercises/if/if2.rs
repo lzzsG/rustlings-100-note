@@ -4,6 +4,7 @@
 // Step 2: Get the bar_for_fuzz and default_to_baz tests passing!
 //
 // Execute `rustlings hint if2` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note if2` or use the `note if2` watch subcommand for lzz's note.
 
 // I AM NOT DONE
 

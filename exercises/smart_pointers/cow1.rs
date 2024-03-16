@@ -11,6 +11,7 @@
 // TODO markers.
 //
 // Execute `rustlings hint cow1` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note cow1` or use the `note cow1` watch subcommand for lzz's note.
 
 // I AM NOT DONE
 

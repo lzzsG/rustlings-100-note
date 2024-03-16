@@ -8,8 +8,10 @@
 //
 // Make me compile and pass the tests!
 //
-// Execute `rustlings hint hashmaps1` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint hashmaps1` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note hashmaps1` or use the `note hashmaps1` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

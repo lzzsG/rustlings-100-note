@@ -9,6 +9,7 @@
 // sun has multiple owners.
 //
 // Execute `rustlings hint rc1` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note rc1` or use the `note rc1` watch subcommand for lzz's note.
 
 // I AM NOT DONE
 

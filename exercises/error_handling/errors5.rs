@@ -19,8 +19,10 @@
 // What can we use to describe both errors? In other words, is there a trait
 // which both errors implement?
 //
-// Execute `rustlings hint errors5` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint errors5` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note errors5` or use the `note errors5` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

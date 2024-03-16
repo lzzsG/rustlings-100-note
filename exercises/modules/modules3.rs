@@ -5,8 +5,10 @@
 // SystemTime and UNIX_EPOCH from the std::time module. Bonus style points if
 // you can do it with one line!
 //
-// Execute `rustlings hint modules3` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint modules3` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note modules3` or use the `note modules3` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

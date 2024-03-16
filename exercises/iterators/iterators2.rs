@@ -3,8 +3,10 @@
 // In this exercise, you'll learn some of the unique advantages that iterators
 // can offer. Follow the steps to complete the exercise.
 //
-// Execute `rustlings hint iterators2` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint iterators2` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note iterators2` or use the `note iterators2` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

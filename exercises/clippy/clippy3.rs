@@ -3,6 +3,7 @@
 // Here's a couple more easy Clippy fixes, so you can see its utility.
 //
 // Execute `rustlings hint clippy3` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note clippy3` or use the `note clippy3` watch subcommand for lzz's note.
 
 // I AM NOT DONE
 

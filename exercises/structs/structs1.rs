@@ -2,8 +2,10 @@
 //
 // Address all the TODOs to make the tests pass!
 //
-// Execute `rustlings hint structs1` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint structs1` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note structs1` or use the `note structs1` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

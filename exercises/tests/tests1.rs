@@ -7,8 +7,10 @@
 // This test has a problem with it -- make the test compile! Make the test pass!
 // Make the test fail!
 //
-// Execute `rustlings hint tests1` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint tests1` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note tests1` or use the `note tests1` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

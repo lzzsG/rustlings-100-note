@@ -20,6 +20,7 @@
 // `numbers` Vec!
 //
 // Execute `rustlings hint arc1` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note arc1` or use the `note arc1` watch subcommand for lzz's note.
 
 // I AM NOT DONE
 

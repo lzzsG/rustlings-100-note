@@ -10,8 +10,9 @@
 // line, or try changing what it outputs in your terminal. Try removing a
 // semicolon and see what happens!
 //
-// Execute `rustlings hint intro1` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint intro1` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note intro1` or use the `note intro1` watch subcommand for lzz's note.
+
 
 
 fn main() {

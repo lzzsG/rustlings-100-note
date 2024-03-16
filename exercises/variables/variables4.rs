@@ -1,7 +1,9 @@
 // variables4.rs
 //
-// Execute `rustlings hint variables4` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint variables4` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note variables4` or use the `note variables4` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

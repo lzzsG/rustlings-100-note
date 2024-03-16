@@ -3,8 +3,10 @@
 // This shopping list program isn't compiling! Use your knowledge of generics to
 // fix it.
 //
-// Execute `rustlings hint generics1` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint generics1` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note generics1` or use the `note generics1` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

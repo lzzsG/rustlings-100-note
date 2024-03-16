@@ -6,8 +6,10 @@
 // an object of the implementor type. You can read more about it at
 // https://doc.rust-lang.org/std/str/trait.FromStr.html
 //
-// Execute `rustlings hint from_str` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint from_str` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note from_str` or use the `note from_str` watch subcommand for lzz's note.
+
+
 
 use std::num::ParseIntError;
 use std::str::FromStr;

@@ -1,7 +1,9 @@
 // enums2.rs
 //
-// Execute `rustlings hint enums2` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint enums2` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note enums2` or use the `note enums2` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

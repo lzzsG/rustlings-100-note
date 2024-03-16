@@ -17,7 +17,7 @@ use std::sync::mpsc::{channel, RecvTimeoutError};
 use std::sync::{Arc, Mutex};
 use std::thread;
 use std::time::Duration;
-use std::time::{UNIX_EPOCH, SystemTime};
+use std::time::{SystemTime, UNIX_EPOCH};
 
 #[macro_use]
 mod ui;
@@ -51,9 +51,11 @@ enum Subcommands {
     Run(RunArgs),
     Reset(ResetArgs),
     Hint(HintArgs),
+    Note(NoteArgs),
+
     List(ListArgs),
     Lsp(LspArgs),
-    CicvVerify(CicvVerifyArgs)
+    CicvVerify(CicvVerifyArgs),
 }
 
 #[derive(FromArgs, PartialEq, Debug)]
@@ -102,6 +104,15 @@ struct HintArgs {
 }
 
 #[derive(FromArgs, PartialEq, Debug)]
+#[argh(subcommand, name = "note")]
+/// Returns a note for the given exercise
+struct NoteArgs {
+    #[argh(positional)]
+    /// the name of the exercise
+    name: String,
+}
+
+#[derive(FromArgs, PartialEq, Debug)]
 #[argh(subcommand, name = "lsp")]
 /// Enable rust-analyzer for exercises
 struct LspArgs {}
@@ -132,17 +143,17 @@ struct ListArgs {
 pub struct ExerciseCheckList {
     pub exercises: Vec<ExerciseResult>,
     pub user_name: Option<String>,
-    pub statistics: ExerciseStatistics
+    pub statistics: ExerciseStatistics,
 }
 
 #[derive(Deserialize, Serialize)]
 pub struct ExerciseResult {
     pub name: String,
-    pub result: bool
+    pub result: bool,
 }
 
 #[derive(Deserialize, Serialize)]
-pub struct  ExerciseStatistics {
+pub struct ExerciseStatistics {
     pub total_exercations: usize,
     pub total_succeeds: usize,
     pub total_failures: usize,
@@ -259,6 +270,26 @@ async fn main() {
 
             println!("{}", exercise.hint);
         }
+        Subcommands::Note(subargs) => {
+            let exercise = find_exercise(&subargs.name, &exercises);
+
+            let path_str = exercise
+                .path
+                .to_string_lossy()
+                .replace(".rs", ".html")
+                .replace("exercises/", "");
+            let tutorial_url = format!("https://lzzsg.github.io/rustlings-notebook/{}", path_str);
+
+            // 使用webbrowser库打开浏览器访问教程网页
+            if webbrowser::open(&tutorial_url).is_ok() {
+                println!("Opened tutorial for {} in your browser.", subargs.name);
+            } else {
+                println!(
+                    "Could not open tutorial for {} in your browser.",
+                    subargs.name
+                );
+            }
+        }
 
         Subcommands::Verify(_subargs) => {
             verify(&exercises, (0, exercises.len()), verbose, false)
@@ -268,69 +299,103 @@ async fn main() {
         Subcommands::CicvVerify(_subargs) => {
             // let toml_str = &fs::read_to_string("info.toml").unwrap();
             // exercises = toml::from_str::<ExerciseList>(toml_str).unwrap().exercises;
-            let now_start = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_secs();
+            let now_start = SystemTime::now()
+                .duration_since(UNIX_EPOCH)
+                .unwrap()
+                .as_secs();
             let rights = Arc::new(Mutex::new(0));
             let alls = exercises.len();
 
-            let exercise_check_list =  Arc::new(Mutex::new(
-                ExerciseCheckList {
-                    exercises: vec![], 
-                    user_name:  None, 
-                    statistics: ExerciseStatistics { 
-                        total_exercations: alls, 
-                        total_succeeds: 0, 
-                        total_failures: 0, 
-                        total_time: 0, 
-                    }
-                }
-            ));
+            let exercise_check_list = Arc::new(Mutex::new(ExerciseCheckList {
+                exercises: vec![],
+                user_name: None,
+                statistics: ExerciseStatistics {
+                    total_exercations: alls,
+                    total_succeeds: 0,
+                    total_failures: 0,
+                    total_time: 0,
+                },
+            }));
 
             let mut tasks = vec![];
             for exercise in exercises {
-                let now_start = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_secs();
+                let now_start = SystemTime::now()
+                    .duration_since(UNIX_EPOCH)
+                    .unwrap()
+                    .as_secs();
                 let inner_exercise = exercise;
                 let c_mutex = Arc::clone(&rights);
                 let exercise_check_list_ref = Arc::clone(&exercise_check_list);
                 let _verbose = verbose.clone();
-                let t = tokio::task::spawn( async move {
+                let t = tokio::task::spawn(async move {
                     match run(&inner_exercise, true) {
-                    // match verify(vec![&inner_exercise], (0, 1), true, true) {
+                        // match verify(vec![&inner_exercise], (0, 1), true, true) {
                         Ok(_) => {
                             *c_mutex.lock().unwrap() += 1;
                             println!("{}执行成功", inner_exercise.name);
                             println!("总的题目数: {}", alls);
                             println!("当前做正确的题目数: {}", *c_mutex.lock().unwrap());
-                            let now_end = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_secs();
+                            let now_end = SystemTime::now()
+                                .duration_since(UNIX_EPOCH)
+                                .unwrap()
+                                .as_secs();
                             println!("当前修改试卷耗时: {} s", now_end - now_start);
-                            exercise_check_list_ref.lock().unwrap().exercises.push(ExerciseResult{ 
-                                name: inner_exercise.name, result: true,
-                            });
-                            exercise_check_list_ref.lock().unwrap().statistics.total_succeeds += 1;
-                        },
+                            exercise_check_list_ref.lock().unwrap().exercises.push(
+                                ExerciseResult {
+                                    name: inner_exercise.name,
+                                    result: true,
+                                },
+                            );
+                            exercise_check_list_ref
+                                .lock()
+                                .unwrap()
+                                .statistics
+                                .total_succeeds += 1;
+                        }
                         Err(_) => {
                             println!("{}执行失败", inner_exercise.name);
                             println!("总的题目数: {}", alls);
                             println!("当前做正确的题目数: {}", *c_mutex.lock().unwrap());
-                            let now_end = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_secs();
+                            let now_end = SystemTime::now()
+                                .duration_since(UNIX_EPOCH)
+                                .unwrap()
+                                .as_secs();
                             println!("当前修改试卷耗时: {} s", now_end - now_start);
-                            exercise_check_list_ref.lock().unwrap().exercises.push(ExerciseResult{ 
-                                name: inner_exercise.name, result: false,
-                            });
-                            exercise_check_list_ref.lock().unwrap().statistics.total_failures += 1;
+                            exercise_check_list_ref.lock().unwrap().exercises.push(
+                                ExerciseResult {
+                                    name: inner_exercise.name,
+                                    result: false,
+                                },
+                            );
+                            exercise_check_list_ref
+                                .lock()
+                                .unwrap()
+                                .statistics
+                                .total_failures += 1;
                         }
                     }
                 });
                 tasks.push(t);
             }
-            for task in tasks { task.await.unwrap(); }
-            let now_end = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_secs();
+            for task in tasks {
+                task.await.unwrap();
+            }
+            let now_end = SystemTime::now()
+                .duration_since(UNIX_EPOCH)
+                .unwrap()
+                .as_secs();
             let total_time = now_end - now_start;
             println!("===============================试卷批改完成,总耗时: {} s; ==================================", total_time);
             let exercise_check_list_ref = Arc::clone(&exercise_check_list);
-            exercise_check_list_ref.lock().unwrap().statistics.total_time = total_time as u32;
-            let serialized = serde_json::to_string_pretty(&*exercise_check_list.lock().unwrap()).unwrap();
+            exercise_check_list_ref
+                .lock()
+                .unwrap()
+                .statistics
+                .total_time = total_time as u32;
+            let serialized =
+                serde_json::to_string_pretty(&*exercise_check_list.lock().unwrap()).unwrap();
             fs::write(".github/result/check_result.json", serialized).unwrap();
-        },
+        }
 
         Subcommands::Lsp(_subargs) => {
             let mut project = RustAnalyzerProject::new();
@@ -379,6 +444,8 @@ fn spawn_watch_shell(
     failed_exercise_hint: &Arc<Mutex<Option<String>>>,
     should_quit: Arc<AtomicBool>,
 ) {
+    let toml_str = &fs::read_to_string("info.toml").unwrap();
+    let exercises = toml::from_str::<ExerciseList>(toml_str).unwrap().exercises;
     let failed_exercise_hint = Arc::clone(failed_exercise_hint);
     println!("Welcome to watch mode! You can type 'help' to get an overview of the commands you can use here.");
     thread::spawn(move || loop {
@@ -390,6 +457,30 @@ fn spawn_watch_shell(
                     if let Some(hint) = &*failed_exercise_hint.lock().unwrap() {
                         println!("{hint}");
                     }
+                } else if input.starts_with("note") {
+                    // Assuming "note" command format is "note exercise_name"
+                    // 获得name有点复杂，自己输入吧😅
+                    let parts: Vec<&str> = input.split_whitespace().collect();
+                    if parts.len() < 2 {
+                        println!("Usage: note exercise_name");
+                        continue;
+                    }
+                    let exercise_name = parts[1];
+                    let exercise = find_exercise(&exercise_name, &exercises);
+                    let path_str = exercise
+                        .path
+                        .to_string_lossy()
+                        .replace(".rs", ".html")
+                        .replace("exercises/", "");
+                    let tutorial_url =
+                        format!("https://lzzsg.github.io/rustlings-notebook/{}", path_str);
+
+                    // 使用webbrowser库打开浏览器访问教程网页
+                    if webbrowser::open(&tutorial_url).is_ok() {
+                        println!("Opened note for {} in your browser.", exercise_name);
+                    } else {
+                        println!("Could not open note for {} in your browser.", exercise_name);
+                    }
                 } else if input == "clear" {
                     println!("\x1B[2J\x1B[1;1H");
                 } else if input.eq("quit") {
@@ -398,7 +489,10 @@ fn spawn_watch_shell(
                 } else if input.eq("help") {
                     println!("Commands available to you in watch mode:");
                     println!("  hint   - prints the current exercise's hint");
-                    println!("  clear  - clears the screen");
+                    println!(
+                        "  note exercise_name   -like `note threads1` open lzz's rustlings note"
+                    );
+                    println!("  clear   - clears the screen");
                     println!("  quit   - quits watch mode");
                     println!("  !<cmd> - executes a command, like `!rustc --explain E0381`");
                     println!("  help   - displays this help message");

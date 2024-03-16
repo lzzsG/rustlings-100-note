@@ -2,8 +2,10 @@
 //
 // Address all the TODOs to make the tests pass!
 //
-// Execute `rustlings hint enums3` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint enums3` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note enums3` or use the `note enums3` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

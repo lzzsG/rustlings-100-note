@@ -5,8 +5,10 @@
 //
 // Consider what you can add to the Licensed trait.
 //
-// Execute `rustlings hint traits3` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint traits3` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note traits3` or use the `note traits3` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

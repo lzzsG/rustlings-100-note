@@ -1,6 +1,7 @@
 // if3.rs
 //
 // Execute `rustlings hint if3` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note if3` or use the `note if3` watch subcommand for lzz's note.
 
 // I AM NOT DONE
 

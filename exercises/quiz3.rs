@@ -15,6 +15,7 @@
 // "A+" to show that your changes allow alphabetical grades.
 //
 // Execute `rustlings hint quiz3` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note quiz3` or use the `note quiz3` watch subcommand for lzz's note.
 
 // I AM NOT DONE
 

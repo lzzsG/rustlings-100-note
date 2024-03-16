@@ -1,7 +1,9 @@
 // modules1.rs
 //
-// Execute `rustlings hint modules1` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint modules1` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note modules1` or use the `note modules1` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

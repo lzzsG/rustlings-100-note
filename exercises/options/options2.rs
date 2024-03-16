@@ -1,7 +1,9 @@
 // options2.rs
 //
-// Execute `rustlings hint options2` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint options2` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note options2` or use the `note options2` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

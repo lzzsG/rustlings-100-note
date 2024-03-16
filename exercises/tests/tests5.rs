@@ -19,8 +19,10 @@
 // code to yourself! If you cannot prove the memory safety and soundness of
 // your own code, take a step back and use safe code instead!
 //
-// Execute `rustlings hint tests5` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint tests5` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note tests5` or use the `note tests5` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

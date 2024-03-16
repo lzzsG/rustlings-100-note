@@ -5,8 +5,10 @@
 // about the function bodies themselves, we're only interested in the signatures
 // for now. If anything, this is a good way to peek ahead to future exercises!)
 //
-// Execute `rustlings hint functions4` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint functions4` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note functions4` or use the `note functions4` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

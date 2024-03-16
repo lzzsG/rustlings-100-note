@@ -1,7 +1,9 @@
 // threads3.rs
 //
-// Execute `rustlings hint threads3` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint threads3` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note threads3` or use the `note threads3` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

@@ -1,7 +1,9 @@
 // functions3.rs
 //
-// Execute `rustlings hint functions3` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint functions3` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note functions3` or use the `note functions3` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

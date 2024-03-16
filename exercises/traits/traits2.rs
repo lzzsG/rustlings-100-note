@@ -7,6 +7,7 @@
 // No boiler plate code this time, you can do this!
 //
 // Execute `rustlings hint traits2` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note traits2` or use the `note traits2` watch subcommand for lzz's note.
 
 // I AM NOT DONE
 

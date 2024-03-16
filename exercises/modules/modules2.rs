@@ -4,8 +4,10 @@
 // the 'use' and 'as' keywords. Fix these 'use' statements to make the code
 // compile.
 //
-// Execute `rustlings hint modules2` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint modules2` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note modules2` or use the `note modules2` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

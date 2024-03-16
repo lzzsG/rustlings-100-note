@@ -4,8 +4,10 @@
 // work but this time the spawned threads need to be in charge of updating a
 // shared value: JobStatus.jobs_completed
 //
-// Execute `rustlings hint threads2` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint threads2` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note threads2` or use the `note threads2` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

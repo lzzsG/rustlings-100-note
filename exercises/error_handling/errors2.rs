@@ -16,8 +16,10 @@
 // There are at least two ways to implement this that are both correct-- but one
 // is a lot shorter!
 //
-// Execute `rustlings hint errors2` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint errors2` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note errors2` or use the `note errors2` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

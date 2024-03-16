@@ -2,8 +2,10 @@
 //
 // Lifetimes are also needed when structs hold references.
 //
-// Execute `rustlings hint lifetimes3` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint lifetimes3` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note lifetimes3` or use the `note lifetimes3` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

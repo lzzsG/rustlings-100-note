@@ -2,8 +2,10 @@
 //
 // Make sure that we're testing for the correct conditions!
 //
-// Execute `rustlings hint tests4` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint tests4` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note tests4` or use the `note tests4` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

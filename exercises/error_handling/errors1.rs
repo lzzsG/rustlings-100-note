@@ -6,8 +6,10 @@
 // construct to `Result` that can be used to express error conditions. Let's use
 // it!
 //
-// Execute `rustlings hint errors1` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint errors1` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note errors1` or use the `note errors1` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

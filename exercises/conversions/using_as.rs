@@ -7,8 +7,10 @@
 // The goal is to make sure that the division does not fail to compile and
 // returns the proper type.
 //
-// Execute `rustlings hint using_as` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint using_as` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note using_as` or use the `note using_as` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

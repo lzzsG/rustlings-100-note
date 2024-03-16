@@ -5,8 +5,10 @@
 // going out of scope before it is used. Remember, references are borrows and do
 // not own their own data. What if their owner goes out of scope?
 //
-// Execute `rustlings hint lifetimes1` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint lifetimes1` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note lifetimes1` or use the `note lifetimes1` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

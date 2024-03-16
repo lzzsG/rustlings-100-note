@@ -3,8 +3,10 @@
 // So if the compiler is just validating the references passed to the annotated
 // parameters and the return type, what do we need to change?
 //
-// Execute `rustlings hint lifetimes2` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint lifetimes2` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note lifetimes2` or use the `note lifetimes2` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

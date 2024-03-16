@@ -4,8 +4,10 @@
 // unsafe functions. Fix all the question marks and todos to make the test
 // pass.
 //
-// Execute `rustlings hint tests6` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint tests6` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note tests6` or use the `note tests6` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

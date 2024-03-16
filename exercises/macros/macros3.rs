@@ -2,8 +2,10 @@
 //
 // Make me compile, without taking the macro out of the module!
 //
-// Execute `rustlings hint macros3` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint macros3` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note macros3` or use the `note macros3` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

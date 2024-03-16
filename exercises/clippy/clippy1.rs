@@ -6,8 +6,10 @@
 // For these exercises the code will fail to compile when there are clippy
 // warnings check clippy's suggestions from the output to solve the exercise.
 //
-// Execute `rustlings hint clippy1` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint clippy1` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note clippy1` or use the `note clippy1` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

@@ -4,8 +4,10 @@
 // `AppendBar` for the type `String`. The trait AppendBar has only one function,
 // which appends "Bar" to any object implementing this trait.
 //
-// Execute `rustlings hint traits1` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint traits1` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note traits1` or use the `note traits1` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

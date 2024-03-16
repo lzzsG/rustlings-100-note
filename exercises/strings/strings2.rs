@@ -2,8 +2,10 @@
 //
 // Make me compile without changing the function signature!
 //
-// Execute `rustlings hint strings2` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint strings2` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note strings2` or use the `note strings2` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

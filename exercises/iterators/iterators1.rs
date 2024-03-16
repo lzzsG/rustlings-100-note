@@ -6,8 +6,10 @@
 //
 // Make me compile by filling in the `???`s
 //
-// Execute `rustlings hint iterators1` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint iterators1` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note iterators1` or use the `note iterators1` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

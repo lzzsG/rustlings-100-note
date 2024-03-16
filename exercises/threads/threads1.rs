@@ -5,8 +5,10 @@
 // wait until all the spawned threads have finished and should collect their
 // return values into a vector.
 //
-// Execute `rustlings hint threads1` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint threads1` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note threads1` or use the `note threads1` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

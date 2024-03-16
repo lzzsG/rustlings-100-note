@@ -6,8 +6,10 @@
 // define a custom error type to make it possible for callers to decide what to
 // do next when our function returns an error.
 //
-// Execute `rustlings hint errors6` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint errors6` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note errors6` or use the `note errors6` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

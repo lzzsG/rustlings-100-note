@@ -1,7 +1,9 @@
 // iterators4.rs
 //
-// Execute `rustlings hint iterators4` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint iterators4` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note iterators4` or use the `note iterators4` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

@@ -4,8 +4,10 @@
 // about them at https://doc.rust-lang.org/std/convert/trait.AsRef.html and
 // https://doc.rust-lang.org/std/convert/trait.AsMut.html, respectively.
 //
-// Execute `rustlings hint as_ref_mut` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint as_ref_mut` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note as_ref_mut` or use the `note as_ref_mut` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

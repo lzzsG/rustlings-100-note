@@ -4,8 +4,10 @@
 //
 // Don't change any line other than the marked one.
 //
-// Execute `rustlings hint traits5` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint traits5` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note traits5` or use the `note traits5` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

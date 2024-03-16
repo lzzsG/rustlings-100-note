@@ -6,6 +6,7 @@
 // Make me pass the test!
 //
 // Execute `rustlings hint vecs2` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note vecs2` or use the `note vecs2` watch subcommand for lzz's note.
 
 // I AM NOT DONE
 

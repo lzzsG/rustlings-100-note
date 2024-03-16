@@ -4,8 +4,10 @@
 // defined the Package struct and we want to test some logic attached to it.
 // Make the code compile and the tests pass!
 //
-// Execute `rustlings hint structs3` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint structs3` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note structs3` or use the `note structs3` watch subcommand for lzz's note.
+
+
 
 // I AM NOT DONE
 

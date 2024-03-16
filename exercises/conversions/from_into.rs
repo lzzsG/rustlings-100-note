@@ -4,8 +4,10 @@
 // correctly for a type, the Into trait should work conversely. You can read
 // more about it at https://doc.rust-lang.org/std/convert/trait.From.html
 //
-// Execute `rustlings hint from_into` or use the `hint` watch subcommand for a
-// hint.
+// Execute `rustlings hint from_into` or use the `hint` watch subcommand for a hint.
+// Execute `rustlings note from_into` or use the `note from_into` watch subcommand for lzz's note.
+
+
 
 #[derive(Debug)]
 struct Person {
